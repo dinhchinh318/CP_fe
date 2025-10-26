@@ -1,3 +1,4 @@
+import { config } from '../config';
 export interface AiResponse {
   reply: string;
   error?: string;
@@ -5,7 +6,8 @@ export interface AiResponse {
 
 export async function sendToAI(message: string): Promise<AiResponse> {
   try {
-    const res = await fetch("${config.API_URL}/api/ai/", {
+    const res = await fetch(`${config.API_URL}/api/ai/`, {
+    //                      ↑ Backtick (phím ~ bên trái số 1)
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message }),
@@ -19,6 +21,7 @@ export async function sendToAI(message: string): Promise<AiResponse> {
 
     return { reply: data.reply };
   } catch (err: any) {
+    console.error('AI API Error:', err);
     return { reply: "", error: err.message };
   }
 }
