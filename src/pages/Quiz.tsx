@@ -150,11 +150,11 @@ const Quiz: React.FC = () => {
                   style={{ marginRight: '0.5rem' }}
                 />
                 <span>
-                  {score === 1 && 'Strongly Disagree'}
-                  {score === 2 && 'Disagree'}
-                  {score === 3 && 'Neutral'}
-                  {score === 4 && 'Agree'}
-                  {score === 5 && 'Strongly Agree'}
+                  {score === 1 && 'Hoàn toàn không đồng ý'}
+                  {score === 2 && 'Không đồng ý'}
+                  {score === 3 && 'Bình thường'}
+                  {score === 4 && 'Đồng ý'}
+                  {score === 5 && 'Hoàn toàn đồng ý'}
                 </span>
               </label>
             ))}
