@@ -6,8 +6,7 @@ export interface AiResponse {
 
 export async function sendToAI(message: string): Promise<AiResponse> {
   try {
-    const res = await fetch(`${config.API_URL}/api/ai/`, {
-    //                      ↑ Backtick (phím ~ bên trái số 1)
+    const res = await fetch("https://cp-be.onrender.com/api/ai", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message }),
