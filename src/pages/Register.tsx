@@ -1,141 +1,3 @@
-// import React, { useState } from 'react';
-// import { Link, useNavigate } from 'react-router-dom';
-// import { useAuth } from '../contexts/AuthContext';
-// import { authService } from '../services/services';
-
-// const Register: React.FC = () => {
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     email: '',
-//     password: '',
-//     confirmPassword: '',
-//   });
-//   const [error, setError] = useState('');
-//   const [loading, setLoading] = useState(false);
-  
-//   const { login } = useAuth();
-//   const navigate = useNavigate();
-
-//   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-//     setFormData({
-//       ...formData,
-//       [e.target.name]: e.target.value,
-//     });
-//   };
-
-//   const handleSubmit = async (e: React.FormEvent) => {
-//     e.preventDefault();
-//     setError('');
-
-//     if (formData.password !== formData.confirmPassword) {
-//       setError('Passwords do not match');
-//       return;
-//     }
-
-//     if (formData.password.length < 6) {
-//       setError('Password must be at least 6 characters');
-//       return;
-//     }
-
-//     setLoading(true);
-
-//     try {
-//       await authService.register({
-//         name: formData.name,
-//         email: formData.email,
-//         password: formData.password,
-//       });
-      
-//       // Auto-login after registration
-//       const loginResponse = await authService.login({
-//         email: formData.email,
-//         password: formData.password,
-//       });
-      
-//       login(loginResponse.token, loginResponse.user);
-//       navigate('/');
-//     } catch (err: any) {
-//       setError(err.response?.data?.message || 'Registration failed');
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   return (
-//     <div className="container">
-//       <div className="card" style={{ maxWidth: '400px', margin: '0 auto' }}>
-//         <h2 className="text-center mb-4">Register</h2>
-        
-//         {error && <div className="alert alert-error">{error}</div>}
-        
-//         <form onSubmit={handleSubmit}>
-//           <div className="form-group">
-//             <label className="form-label">Name</label>
-//             <input
-//               type="text"
-//               name="name"
-//               className="form-input"
-//               value={formData.name}
-//               onChange={handleChange}
-//               required
-//             />
-//           </div>
-          
-//           <div className="form-group">
-//             <label className="form-label">Email</label>
-//             <input
-//               type="email"
-//               name="email"
-//               className="form-input"
-//               value={formData.email}
-//               onChange={handleChange}
-//               required
-//             />
-//           </div>
-          
-//           <div className="form-group">
-//             <label className="form-label">Password</label>
-//             <input
-//               type="password"
-//               name="password"
-//               className="form-input"
-//               value={formData.password}
-//               onChange={handleChange}
-//               required
-//             />
-//           </div>
-          
-//           <div className="form-group">
-//             <label className="form-label">Confirm Password</label>
-//             <input
-//               type="password"
-//               name="confirmPassword"
-//               className="form-input"
-//               value={formData.confirmPassword}
-//               onChange={handleChange}
-//               required
-//             />
-//           </div>
-          
-//           <button 
-//             type="submit" 
-//             className="btn" 
-//             style={{ width: '100%' }}
-//             disabled={loading}
-//           >
-//             {loading ? 'Creating Account...' : 'Register'}
-//           </button>
-//         </form>
-        
-//         <p className="text-center mt-4">
-//           Already have an account? <Link to="/login">Login here</Link>
-//         </p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Register;
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -148,7 +10,7 @@ const Register: React.FC = () => {
     password: '',
     confirmPassword: '',
   });
-  // CẢI TIẾN: Dùng state riêng cho thông báo thành công
+
   const [error, setError] = useState<string | null>(null); 
   const [loading, setLoading] = useState(false);
   
@@ -164,10 +26,9 @@ const Register: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null); // Đặt lại lỗi trước khi submit
+    setError(null);
 
-    // CẢI TIẾN: Thay vì `formData.password.length < 6`, 
-    // nên để backend kiểm tra độ dài. Nhưng nếu muốn check frontend thì giữ lại.
+
     if (formData.password.length < 6) {
       setError('Password must be at least 6 characters');
       return;

@@ -55,13 +55,10 @@ const Admin: React.FC = () => {
         category: newQuestion.category
       };
 
-      // ✅ Gọi API thêm câu hỏi vào DB
       const created = await questionService.createQuestion(payload);
 
-      // ✅ Cập nhật UI
       setQuestions([...questions, created]);
 
-      // ✅ Reset form
       setNewQuestion({ content: '', category: 'R' });
       setShowAddForm(false);
     } catch (err) {
@@ -185,7 +182,6 @@ const Admin: React.FC = () => {
                   </span>
                 </div>
 
-                {/* ✅ BUTTON DELETE */}
                 <button
                   className="btn btn-danger"
                   onClick={() => handleDeleteQuestion(question._id!)}

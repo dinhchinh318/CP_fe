@@ -24,7 +24,7 @@ export const questionService = {
     category: 'R' | 'I' | 'A' | 'S' | 'E' | 'C';
   }): Promise<Question> => {
     const response = await api.post('/questions', data);
-    return response.data.question; // ✅ lấy object question từ backend
+    return response.data.question;
   },
   
   deleteQuestion: async (id: string): Promise<void> => {
