@@ -19,7 +19,7 @@ const Admin: React.FC = () => {
 
   useEffect(() => {
     if (!isAuthenticated) {
-      navigate('/login');
+      navigate('/admin');
       return;
     }
     

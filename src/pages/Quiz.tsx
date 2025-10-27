@@ -17,7 +17,7 @@ const Quiz: React.FC = () => {
 
   useEffect(() => {
     if (!isAuthenticated) {
-      navigate('/login');
+      navigate('/quiz');
       return;
     }
     
