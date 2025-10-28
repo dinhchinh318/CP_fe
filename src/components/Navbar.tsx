@@ -35,8 +35,11 @@ const Navbar: React.FC = () => {
         background: "linear-gradient(90deg, #007bff 0%, #6f42c1 100%)",
         boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
         padding: "0.75rem 0",
-        position: "sticky",
+        position: "fixed",
         top: 0,
+        left: 0,
+        right: 0,
+        width: "100%",
         zIndex: 1000,
       }}
     >
