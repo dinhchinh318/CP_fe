@@ -9,6 +9,7 @@ import Quiz from './pages/Quiz';
 import Result from './pages/Result';
 import Admin from './pages/Admin';
 import Chatbox from "./components/Chatbox/Chatbox";
+import Footer from "./components/Footer";
 import './App.css';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             </Routes>
           </main>
            <Chatbox />
+           <Footer />
         </div>
       </Router>
     </AuthProvider>

@@ -82,7 +82,7 @@ const Quiz: React.FC = () => {
     return (
       <div className="container">
         <div className="card text-center">
-          <h2>Loading questions...</h2>
+          <h2>Đang tải câu hỏi...</h2>
         </div>
       </div>
     );
@@ -106,8 +106,8 @@ const Quiz: React.FC = () => {
     <div className="container">
       <div className="card">
         <div className="text-center mb-4">
-          <h2>Career Assessment Quiz</h2>
-          <p>Question {currentQuestionIndex + 1} of {questions.length}</p>
+          <h2>Bài kiểm tra đánh giá nghề nghiệp</h2>
+          <p>Câu hỏi {currentQuestionIndex + 1} of {questions.length}</p>
           <div style={{ 
             width: '100%', 
             background: '#e9ecef', 
@@ -167,7 +167,7 @@ const Quiz: React.FC = () => {
             className="btn btn-secondary"
             disabled={currentQuestionIndex === 0}
           >
-            Previous
+            Về câu trước
           </button>
           
           <div>
@@ -177,7 +177,7 @@ const Quiz: React.FC = () => {
                 className="btn btn-success"
                 disabled={submitting || currentAnswer.score === 0}
               >
-                {submitting ? 'Submitting...' : 'Submit Test'}
+                {submitting ? 'Đang nộp bài...' : 'Nộp bài'}
               </button>
             ) : (
               <button 
@@ -185,7 +185,7 @@ const Quiz: React.FC = () => {
                 className="btn"
                 disabled={currentAnswer.score === 0}
               >
-                Next
+                Câu tiếp theo
               </button>
             )}
           </div>

@@ -50,31 +50,19 @@ const Home: React.FC = () => {
         {isAuthenticated ? (
           <div>
             <Link to="/quiz" className="btn btn-success" style={{ marginRight: '1rem' }}>
-              Start Career Assessment
+              Bắt đầu làm bài test đánh giá
             </Link>
           </div>
         ) : (
           <div>
             <Link to="/register" className="btn btn-success" style={{ marginRight: '1rem' }}>
-              Get Started
+              Nhấn để bắt đầu
             </Link>
             <Link to="/login" className="btn btn-secondary">
-              Login
+              Đăng nhập
             </Link>
           </div>
         )}
-      </div>
-
-      {/* Footer */}
-      <div style={{ 
-        textAlign: 'center', 
-        marginTop: '3rem', 
-        paddingTop: '2rem', 
-        borderTop: '1px solid #e0e0e0',
-        color: '#666',
-        fontSize: '0.9rem'
-      }}>
-        <p>© 2025 Nguyễn Duy Thư</p>
       </div>
     </div>
   );

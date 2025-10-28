@@ -109,12 +109,12 @@ const Result: React.FC = () => {
 
   const getCategoryDescriptionTV = (code: string) => {
     const desc: Record<string, string> = {
-      R: 'Thực tế, hành động, thích “làm” hơn “nói”.\n Tư duy cụ thể, quan sát tốt, phản ứng nhanh với tình huống thực tiễn.\n Thích dùng công cụ, máy móc, thao tác bằng tay chân.\n Kiên nhẫn, bền bỉ, có tính kỷ luật và trật tự.\n Thường ít nói, khiêm tốn, nhưng đáng tin cậy. Không thích công việc trừu tượng, lý thuyết hay giao tiếp quá nhiều.',
-      I: 'Tò mò, ham học hỏi, thích đặt câu hỏi “Tại sao?”, “Như thế nào?”.\n Hướng nội, thích làm việc độc lập.\n Tư duy logic, phân tích, có khả năng suy luận và phản biện tốt.\n Thích khám phá, phân tích dữ liệu, đọc – viết – nghiên cứu. Có xu hướng cầu toàn và yêu thích tri thức.\n Thường dè dặt, ít thể hiện cảm xúc, nhưng sâu sắc.',
-      A: 'Giàu cảm xúc, tưởng tượng phong phú, thích tự do.\nTrực giác mạnh, nhạy cảm với cái đẹp, âm thanh, ngôn ngữ.\nKhông thích quy tắc gò bó; dễ “bay bổng” trong ý tưởng.\nDễ xúc động, đôi khi thay đổi cảm xúc nhanh.\nThích thể hiện bản thân và khác biệt.',
-      S: 'Hướng ngoại, ấm áp, dễ đồng cảm và thấu hiểu người khác.\nThích giúp đỡ, giảng dạy, chia sẻ kinh nghiệm.\nGiao tiếp tốt, dễ tạo sự tin tưởng.\nThích làm việc nhóm, không thích cạnh tranh gay gắt.\nNhạy bén với cảm xúc người khác, có khả năng “đọc” tâm lý tốt.',
-      E: 'Tự tin, năng động, thích ảnh hưởng và thuyết phục người khác.\nHướng ngoại, nhiệt huyết, thích cạnh tranh và thành tích.\nQuyết đoán, mạo hiểm, không ngại thử thách.\nCó khả năng tổ chức, lãnh đạo, đưa ra tầm nhìn.\nThường hướng tới quyền lực, vị thế, và thành công vật chất.',
-      C: 'Tỉ mỉ, cẩn thận, trung thực và đáng tin cậy.\nThích quy tắc, trình tự, làm việc có kế hoạch rõ ràng.\nKhông thích rủi ro hay mơ hồ; thích sự ổn định.\nGiỏi quản lý thông tin, dữ liệu, hồ sơ.\nTôn trọng quyền hạn và quy trình.'
+      R: '- Thực tế, hành động, thích “làm” hơn “nói”.\n- Tư duy cụ thể, quan sát tốt, phản ứng nhanh với tình huống thực tiễn.\n- Thích dùng công cụ, máy móc, thao tác bằng tay chân.\n- Kiên nhẫn, bền bỉ, có tính kỷ luật và trật tự.\n- Thường ít nói, khiêm tốn, nhưng đáng tin cậy. Không thích công việc trừu tượng, lý thuyết hay giao tiếp quá nhiều.',
+      I: '- Tò mò, ham học hỏi, thích đặt câu hỏi “Tại sao?”, “Như thế nào?”.\n- Hướng nội, thích làm việc độc lập.\n- Tư duy logic, phân tích, có khả năng suy luận và phản biện tốt.\n- Thích khám phá, phân tích dữ liệu, đọc – viết – nghiên cứu. Có xu hướng cầu toàn và yêu thích tri thức.\n- Thường dè dặt, ít thể hiện cảm xúc, nhưng sâu sắc.',
+      A: '- Giàu cảm xúc, tưởng tượng phong phú, thích tự do.\n- Trực giác mạnh, nhạy cảm với cái đẹp, âm thanh, ngôn ngữ.\n- Không thích quy tắc gò bó; dễ “bay bổng” trong ý tưởng.\n- Dễ xúc động, đôi khi thay đổi cảm xúc nhanh.\n- Thích thể hiện bản thân và khác biệt.',
+      S: '- Hướng ngoại, ấm áp, dễ đồng cảm và thấu hiểu người khác.\n- Thích giúp đỡ, giảng dạy, chia sẻ kinh nghiệm.\n- Giao tiếp tốt, dễ tạo sự tin tưởng.\n- Thích làm việc nhóm, không thích cạnh tranh gay gắt.\n- Nhạy bén với cảm xúc người khác, có khả năng “đọc” tâm lý tốt.',
+      E: '- Tự tin, năng động, thích ảnh hưởng và thuyết phục người khác.\n- Hướng ngoại, nhiệt huyết, thích cạnh tranh và thành tích.\n- Quyết đoán, mạo hiểm, không ngại thử thách.\n- Có khả năng tổ chức, lãnh đạo, đưa ra tầm nhìn.\n- Thường hướng tới quyền lực, vị thế, và thành công vật chất.',
+      C: '- Tỉ mỉ, cẩn thận, trung thực và đáng tin cậy.\n- Thích quy tắc, trình tự, làm việc có kế hoạch rõ ràng.\n- Không thích rủi ro hay mơ hồ; thích sự ổn định.\n- Giỏi quản lý thông tin, dữ liệu, hồ sơ.\n- Tôn trọng quyền hạn và quy trình.'
     };
     return desc[code] || '';
   };
@@ -168,7 +168,7 @@ const Result: React.FC = () => {
       {/* RIASEC Profile Card */}
       <div className="card mb-4" style={{
         background: 'white',
-        padding: '2rem',
+        padding: '1.5rem',
         borderRadius: '16px',
         boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
         border: 'none'
@@ -262,7 +262,7 @@ const Result: React.FC = () => {
       <div className="card mb-4" style={{ 
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', 
         color: 'white', 
-        padding: '2.5rem',
+        padding: '2rem',
         borderRadius: '16px',
         boxShadow: '0 8px 25px rgba(102, 126, 234, 0.3)',
         border: 'none'
@@ -272,9 +272,9 @@ const Result: React.FC = () => {
           alignItems: 'center',
           marginBottom: '2rem'
         }}>
-          <span style={{ fontSize: '2.5rem', marginRight: '1rem' }}>🎯</span>
           <h2 style={{ 
             margin: 0,
+            textAlign: 'center',
             color: 'white', 
             fontSize: '2rem', 
             fontWeight: 'bold',
@@ -287,7 +287,7 @@ const Result: React.FC = () => {
           <div style={{ display: 'grid', gap: '1.5rem' }}>
             {result.riasecCode.split('').map((code, index) => (
               <div key={index} style={{
-                padding: '2rem',
+                padding: '1.2rem',
                 background: 'white',
                 borderRadius: '16px',
                 boxShadow: index === 0 ? '0 10px 30px rgba(0,0,0,0.2)' : '0 6px 15px rgba(0,0,0,0.1)',
@@ -608,6 +608,8 @@ const Result: React.FC = () => {
           onClick={()=>navigate('/')} 
           className="btn"
           style={{
+            marginRight:'1.75rem',
+            marginTop: '20px',
             padding: '1rem 2.5rem',
             fontSize: '1.15rem',
             borderRadius: '30px',

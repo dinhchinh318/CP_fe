@@ -126,3 +126,47 @@ body {
 .mt-4 {
   margin-top: 24px;
 }
+
+/* Blurred background wrapper */
+.App {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Background image (from public/) with blur and slight dim */
+.App::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../public/background.jpg'); /* <-- put your filename from public/ here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(0.5px) saturate(0.95);
+  transform: scale(1.03); /* avoid edge artifacts when blur */
+  z-index: -2;
+}
+
+/* Optional overlay to darken/lighten the blurred image */
+.App::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.25); /* adjust alpha to control darkness */
+  z-index: -1;
+}
+
+/* Ensure main content sits above the background */
+.App .main-content,
+.App .card,
+.App .container {
+  position: relative;
+  z-index: 0;
+}
