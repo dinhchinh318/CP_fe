@@ -49,7 +49,34 @@ export const testService = {
   getResultById: async (resultId: string): Promise<TestResult> => {
     const response = await api.get(`/test/${resultId}`);
     return response.data;
-}
+  }
+};
+
+export const resultService = {
+  checkData: async () => {
+    const response = await api.get('/api/result/check');
+    return response.data;
+  },
+
+  getAll: async () => {
+    const response = await api.get('/api/result/all');
+    return response.data;
+  },
+
+  getAllUsers: async () => {
+    const response = await api.get('/api/result/all-users');
+    return response.data;
+  },
+
+  getAllUsersV2: async () => {
+    const response = await api.get('/api/result/all-users-v2');
+    return response.data;
+  },
+
+  rawCheck: async () => {
+    const response = await api.get('/api/result/raw-check');
+    return response.data;
+  }
 };
 
 export const careerService = {
