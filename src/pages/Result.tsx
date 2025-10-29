@@ -120,7 +120,7 @@ const Result: React.FC = () => {
   };
 
   return (
-    <div className="container" style={{ paddingTop: '2rem', paddingBottom: '3rem' }}>
+    <div className="container" style={{ paddingTop: '2rem', paddingBottom: '3rem' , paddingLeft: '1rem', paddingRight: '1rem'}}>
       <div className="card text-center mb-4" style={{
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         color: 'white',
@@ -262,7 +262,7 @@ const Result: React.FC = () => {
       <div className="card mb-4" style={{ 
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', 
         color: 'white', 
-        padding: '2rem',
+        padding: '1rem',
         borderRadius: '16px',
         boxShadow: '0 8px 25px rgba(102, 126, 234, 0.3)',
         border: 'none'
