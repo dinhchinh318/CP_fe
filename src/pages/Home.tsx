@@ -50,18 +50,26 @@ const Home: React.FC = () => {
         {isAuthenticated ? (
           <div>
             <Link to="/quiz" className="btn btn-success" style={{ marginRight: '1rem' }}>
-              Bắt đầu làm bài test đánh giá
+              Bắt đầu làm bài test
             </Link>
           </div>
-        ) : (
-          <div>
-            <Link to="/register" className="btn btn-success" style={{ marginRight: '1rem' }}>
-              Nhấn để bắt đầu
-            </Link>
-            <Link to="/login" className="btn btn-secondary">
-              Đăng nhập
-            </Link>
-          </div>
+          ) : (
+            <div style={{ maxWidth: '300px', margin: '0 auto' }}>
+              <Link 
+                to="/register" 
+                className="btn btn-success" 
+                style={{ marginBottom: '1rem', display: 'block', width: '100%' }}
+              >
+                Nhấn để bắt đầu
+              </Link>
+              <Link 
+                to="/login" 
+                className="btn btn-secondary" 
+                style={{ display: 'block', width: '100%' }}
+              >
+                Đăng nhập
+              </Link>
+            </div>
         )}
       </div>
     </div>
